@@ -49,7 +49,8 @@ function () {
       if (result && typeof result.registrationId !== 'undefined') {
         _this.emit('registration', result);
       } else if (result && result.additionalData && typeof result.additionalData.actionCallback !== 'undefined') {
-        _this.emit(result.additionalData.actionCallback, result);
+        // _this.emit(result.additionalData.actionCallback, result);
+        _this.emit('notification', result);
       } else if (result) {
         _this.emit('notification', result);
       }
